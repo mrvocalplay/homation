@@ -1,9 +1,10 @@
 package log
 
 import (
-	"fgasper/monitoring/rpi"
 	"log"
 	"os"
+
+	"github.com/mrvocalplay/monitoring/rpi"
 )
 
 func Log(message string) {
