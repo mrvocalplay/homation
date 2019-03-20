@@ -1,6 +1,6 @@
 package main
 
-import a "fgasper/homation/automation"
+import a "github.com/mrvocalplay/homation/automation"
 
 func main() {
 	// temp := rpi.GetTemp()

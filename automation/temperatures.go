@@ -1,8 +1,9 @@
 package automation
 
 import (
-	"fgasper/monitoring/rpi"
 	"fmt"
+
+	"github.com/mrvocalplay/monitoring/rpi"
 )
 
 // PowerOff Kill Server
