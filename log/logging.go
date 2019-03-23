@@ -3,8 +3,6 @@ package log
 import (
 	"log"
 	"os"
-
-	"github.com/mrvocalplay/monitoring/rpi"
 )
 
 func Log(message string) {
@@ -19,8 +17,7 @@ func Log(message string) {
 	log.Print(message)
 }
 
-func MakeLog(CPUTemp string, CPUSpannung string) string {
-	os := rpi.GetOs()
-	log := (os + " " + CPUTemp + " " + CPUSpannung)
+func MakeLog(message string) string {
+	log := (message)
 	return log
 }

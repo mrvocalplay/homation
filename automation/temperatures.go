@@ -3,6 +3,7 @@ package automation
 import (
 	"fmt"
 
+	mon "github.com/mrvocalplay/monitoring"
 	"github.com/mrvocalplay/monitoring/rpi"
 )
 
@@ -16,16 +17,8 @@ func Warn(currentTemp string) {
 	fmt.Println("Temperatures Critical: " + currentTemp)
 }
 
-func Temperatures() {
-	currentTemp := rpi.GetCPUTemp()
-	if rpi.CutStr(currentTemp, "temp=", "'C") > 75 {
-		PowerOff()
-	} else if currentTemp > 65 {
-		Warn(currentTemp)
-	}
-
-	// log.Log(log.MakeLog(rpi.GetCPUTemp(), rpi.GetCPUSpannung()))
-	// rpi.GetCPUTemp()
-	// rpi.GetCPUSpannung()
-	// log.Log("tet")
+func Temperatures() string {
+	currentTemp := mon.CutStr(rpi.GetCPUTemp(), "temp=", "'C")
+	fmt.Println(currentTemp)
+	return currentTemp
 }

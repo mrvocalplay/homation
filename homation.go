@@ -1,10 +1,17 @@
 package main
 
-import a "github.com/mrvocalplay/homation/automation"
+import (
+	a "github.com/mrvocalplay/homation/automation"
+	"github.com/mrvocalplay/homation/log"
+)
 
 func main() {
-	// temp := rpi.GetTemp()
-	// os := rpi.GetOs()
-	// log.WriteLog(log.MakeLog(os, temp))
 	a.Temperatures()
+	a.Volts()
+	a.Clock()
+
+	log.Log(log.MakeLog(a.Temperatures()))
+	// rpi.GetCPUTemp()
+	// rpi.GetCPUSpannung()
+	// log.Log("tet")
 }
