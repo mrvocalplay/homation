@@ -16,7 +16,7 @@ func Warn(currentTemp string) {
 	fmt.Println("Temperatures Critical: " + currentTemp)
 }
 
-func Temp() {
+func Temperatures() {
 	currentTemp := rpi.GetCPUTemp()
 	if rpi.CutStr(currentTemp, "temp=", "'C") > 75 {
 		PowerOff()

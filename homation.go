@@ -6,5 +6,5 @@ func main() {
 	// temp := rpi.GetTemp()
 	// os := rpi.GetOs()
 	// log.WriteLog(log.MakeLog(os, temp))
-	a.Temp()
+	a.Temperatures()
 }
