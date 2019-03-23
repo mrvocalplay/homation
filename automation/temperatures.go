@@ -3,7 +3,7 @@ package automation
 import (
 	"fmt"
 
-	"github.com/mrvocalplay/homation/rpi"
+	"github.com/mrvocalplay/monitoring/rpi"
 )
 
 // PowerOff Kill Server

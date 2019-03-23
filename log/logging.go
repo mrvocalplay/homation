@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/mrvocalplay/homation/rpi"
+	"github.com/mrvocalplay/monitoring/rpi"
 )
 
 func Log(message string) {
