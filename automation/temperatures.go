@@ -12,17 +12,20 @@ func PowerOff() {
 }
 
 // Warn Warn Message
-// func Warn() {
-// 	fmt.Println("Temperatures Critical: " + rpi.GetTemp())
-// }
+func Warn(currentTemp string) {
+	fmt.Println("Temperatures Critical: " + currentTemp)
+}
 
 func Temp() {
-	// currentTemp := rpi.GetTemp()
-	// if currentTemp > 75 {
-	// 	PowerOff()
-	// } else if currentTemp > 65 {
-	// 	Warn()
-	// }
+	currentTemp := rpi.GetCPUTemp()
+	if rpi.CutStr(currentTemp, "temp=", "'C") > 75 {
+		PowerOff()
+	} else if currentTemp > 65 {
+		Warn(currentTemp)
+	}
 
-	rpi.GetTemp()
+	// log.Log(log.MakeLog(rpi.GetCPUTemp(), rpi.GetCPUSpannung()))
+	// rpi.GetCPUTemp()
+	// rpi.GetCPUSpannung()
+	// log.Log("tet")
 }

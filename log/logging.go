@@ -19,8 +19,8 @@ func Log(message string) {
 	log.Print(message)
 }
 
-func MakeLog() {
-	os, temp := rpi.GetOs(), rpi.GetTemp()
-	var log string = os + " " + temp
-	Log(log)
+func MakeLog(CPUTemp string, CPUSpannung string) string {
+	os := rpi.GetOs()
+	log := (os + " " + CPUTemp + " " + CPUSpannung)
+	return log
 }
