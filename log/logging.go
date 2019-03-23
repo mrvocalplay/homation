@@ -3,8 +3,6 @@ package log
 import (
 	"log"
 	"os"
-
-	"github.com/mrvocalplay/monitoring/rpi"
 )
 
 func Log(message string) {
